@@ -25,9 +25,15 @@
 
         socket.emit('mensaje', {nombre: 'miguel'});
 
-        socket.on('mensaje', function(payload){
+        socket.on('nuevo-mensaje', function(payload){
             console.log('Escuchando:', payload );
         });
+
+        socket.on('bandas-activas', function(bandas){
+            console.clear();
+            console.table( bandas );
+        });
+        
     </script>
     
 </body>

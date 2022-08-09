@@ -15,7 +15,7 @@ const publicoPath = path.resolve( __dirname, 'public' );
 
 app.use(express.static(publicoPath));
 
-server.listen( process.env.PORT, (err) => {
+server.listen( process.env.PORT,  /*"192.168.50.21",*/(err) => {
 
     if (err) throw new Error(err);  //{ return console.log('Error Fatal');}
 
